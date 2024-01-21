@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  helloservice:
+    build:
+      context: ./helloService
+      dockerfile: dockerfile
+    ports:
+      - "3001:3001"
+    working_dir: /hello
+    command: ["node", "index.js"]
+
+  profileservice:
+    build:
+      context: ./profileService
+      dockerfile: dockerfile
+    ports:
+      - "3002:3002"
+    working_dir: /profile
+    command: ["node", "index.js"]
