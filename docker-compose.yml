@@ -46,7 +46,7 @@ services:
       context: ./backend/helloService
       dockerfile: dockerfile
       args:
-#         - TAG=helloservice
+        - TAG=helloservice
     ports:
       - "3001:3001"
     working_dir: /hello
@@ -57,7 +57,7 @@ services:
       context: ./backend/profileService
       dockerfile: dockerfile
       args:
-#         - TAG=profileservice
+        - TAG=profileservice
     ports:
       - "3002:3002"
     working_dir: /profile
@@ -68,8 +68,11 @@ services:
       context: ./frontend
       dockerfile: dockerfile
       args:
-#         - TAG=frontendservice
+        - TAG=frontendservice
     ports:
       - "3000:3000"
+    # depends_on:
+    #   - helloservice
+    #   - profileservice
     working_dir: /app
     command: ["npm", "run", "start"]
