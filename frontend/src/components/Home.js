@@ -7,7 +7,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://65.2.38.107:3001/")
+      .get("http://13.126.20.253:3001/")
       .then((response) => {
         setMessage(response.data.msg);
       })
@@ -16,7 +16,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://65.2.38.107:3002/fetchUser")
+      .get("http://13.126.20.253:3002/fetchUser")
       .then((response) => {
         setProfile(response.data);
         
