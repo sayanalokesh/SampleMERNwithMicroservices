@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  helloservice:
+    build:
+      context: ./backend/helloService
+      dockerfile: dockerfile
+    ports:
+      - "3001:3001"
+    working_dir: /hello
+    command: ["node", "index.js"]
+
+  profileservice:
+    build:
+      context: ./backend/profileService
+      dockerfile: dockerfile
+    ports:
+      - "3002:3002"
+    working_dir: /profile
+    command: ["node", "index.js"]
+  
+  frontendservice:
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    ports:
+      - "3000:3000"
+    working_dir: /app
+    command: ["npm", "run", "start"]
