@@ -22,7 +22,7 @@ pipeline {
                     }
                     
                     // sh 'docker tag helloworld-image:latest ${ECR_REPO_URL}/helloworld-image:latest'
-                    sh 'grep -oP "image: \K.*" docker-compose.yml | xargs -I {} docker push {}'
+                    sh 'grep -oP "image: \\K.*" docker-compose.yml | xargs -I {} docker push {}'
                 }
             }
         }
