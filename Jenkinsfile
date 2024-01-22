@@ -8,7 +8,7 @@ pipeline {
     }
 
     stages {
-        stage('Build Backend Service Image') {
+        stage('Build BE and FE Service Image and push to the ECR') {
             steps {
                 script {
                     git branch: 'main', url: 'https://github.com/sayanalokesh/SampleMERNwithMicroservices.git', credentialsId: 'gittoken'
