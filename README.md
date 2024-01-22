@@ -1,5 +1,8 @@
 # SampleMERNwithMicroservices
 
+# Project Description:
+This project aims to deploy a MERN (MongoDB, Express.js, React, Node.js) application on AWS infrastructure using a comprehensive set of steps. Starting with the setup of AWS CLI and Boto3, it progresses through containerizing the application with Docker, version controlling using AWS CodeCommit/GitHub, implementing continuous integration with Jenkins, deploying on Amazon EKS (Elastic Kubernetes Service), and finally establishing monitoring and logging with CloudWatch. The project ensures a streamlined and automated process for deploying and managing a scalable MERN application on AWS.
+
 ## Table of Contents
 1. [Step 1: Set Up the AWS Environment](#step-1-set-up-the-aws-environment)
    - 1.1 [Set Up AWS CLI and Boto3](#11-set-up-aws-cli-and-boto3)
