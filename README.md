@@ -15,7 +15,7 @@
 - Type AWS configure in the EC2 instance and provide the Access key, Secret Access Key, the region, and the format as JSON. Once you have added the access key successfully, you can confirm by typing again using AWS configure and you will be able to see the same as shown in the below screenshot.
   -	Aws configure
   -	![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/f99f3833-bb04-45dd-a74a-4824c2d476f5)
-  -	- Install Boto3 for Python and configure it.
+  -	Install Boto3 for Python and configure it.
   ```bash
   pip install boto3
 
