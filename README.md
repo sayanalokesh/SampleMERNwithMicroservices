@@ -32,6 +32,59 @@
   ```bash
   pip install boto3
 
+## Step 2: Prepare the MERN Application
+
+### 1. Containerize the MERN Application:
+
+Ensure the MERN application is containerized using Docker. Create a Dockerfile for each component (frontend and backend).
+
+- We have the application code in the Git repo, and we need to clone the repo to our EC2 instance.
+
+  ```bash
+  git clone https://github.com/sayanalokesh/SampleMERNwithMicroservices.git
+
+You can find the backend dockerfiles [here](https://github.com/sayanalokesh/SampleMERNwithMicroservices/tree/main/backend). For the frontend [here](https://github.com/sayanalokesh/SampleMERNwithMicroservices/blob/main/frontend/dockerfile).
+
+I have written the docker-compose file to up all the dockerfiles and push the same to the respective repositories. You can find the docker-compose file [here](https://github.com/sayanalokesh/SampleMERNwithMicroservices/blob/main/docker-compose.yml)
+
+To run the `docker-compose` file, simply type the following command:
+
+```bash
+sudo docker-compose up -d
+```
+## Step 3: Version Control
+
+### 1. Use AWS CodeCommit:
+
+- To use AWS CodeCommit, you need to add the "AWSCodeCommitPowerUser" IAM policy to the user.
+- Once you add the policy, you also need to create “HTTPS Git credentials for AWS CodeCommit” in the user section. You need to scroll down and click on the Generate credentials button. A CSV file will be downloaded and save it securely.
+-	Create a CodeCommit repository by clicking on Create repository.
+- Go to the EC2 instance and execute the following commands in the Git repository:
+
+  ```bash
+  git init
+  git add .
+  git commit -m "Initial commit"
+  git remote add codecommit https://git-codecommit.ap-south-1.amazonaws.com/v1/repos/Lokesh_Orchestration_Scaling
+  git push codecommit main
+  ```
+- Once you have executed the above commands, all the files from the GitHub repo will be pushed to the CodeCommit repo. You can verify this by checking the repository, as shown in the screenshot below.
+
+# Step 4: Continuous Integration and Deployment with Jenkins
+
+## 1. Set Up Jenkins:
+
+- Install Jenkins on an EC2 instance. You can find the Jenkins Installation guide [here](https://github.com/sayanalokesh/Jenkins/blob/main/InstallationOfJenkins.md).
+
+- Configure Jenkins with necessary plugins.
+
+- Install "Publish over SSH" plugin.
+
+## 2. Create Jenkins Jobs:
+
+- Create Jenkins jobs for building and pushing Docker images to ECR. Follow the below steps to configure the Jenkins pipeline to push the image to the ECR and deploy the images using a Docker-compose file.
+
+
 # EKS Deployment via HELM
 
 Before using Helm we will individually deploy each microservice after that will deploy the whole application using HELM.
