@@ -32,6 +32,8 @@
   ```bash
   pip install boto3
 
+  
+
 # EKS Deployment via HELM
 
 Before using Helm we will individually deploy each microservice after that will deploy the whole application using HELM.
