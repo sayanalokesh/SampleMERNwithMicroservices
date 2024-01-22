@@ -17,6 +17,10 @@ This project aims to deploy a MERN (MongoDB, Express.js, React, Node.js) applica
 4. [Step 4: Continuous Integration and Deployment with Jenkins](#step-4-continuous-integration-and-deployment-with-jenkins)
 5. [Step 5: Kubernetes (EKS) Deployment via HELM](#step-4-kubernetes-eks-deployment-via-helm)
 
+# Architecture and Deployment process
+![Lokesh_Orchestration_Scaling](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/dc668ec8-b764-4eda-8ea2-b63831920e0c)
+
+
 # Prerequisites
 - We need to install the below before starting the project.
 
