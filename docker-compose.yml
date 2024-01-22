@@ -2,7 +2,7 @@ version: '3'
 
 services:
   helloservice:
-    image: public.ecr.aws/c3w1m1q2/helloworld:1.0.0
+    image: public.ecr.aws/c3w1m1q2/lokeshhelloworld:1.0.0
     build:
       context: ./backend/helloService
       dockerfile: dockerfile
@@ -14,7 +14,7 @@ services:
     command: ["node", "index.js"]
 
   profileservice:
-    image: public.ecr.aws/c3w1m1q2/profileservice:1.0.0
+    image: public.ecr.aws/c3w1m1q2/lokeshprofileservice:1.0.0
     build:
       context: ./backend/profileService
       dockerfile: dockerfile
@@ -26,7 +26,7 @@ services:
     command: ["node", "index.js"]
   
   frontendservice:
-    image: public.ecr.aws/c3w1m1q2/frontend:1.0.0
+    image: public.ecr.aws/c3w1m1q2/lokeshfrontend:1.0.0
     build:
       context: ./frontend
       dockerfile: dockerfile
