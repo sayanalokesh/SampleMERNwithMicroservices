@@ -18,11 +18,14 @@ pipeline {
                     // sh 'docker build -t helloworld-image .'
                     withCredentials([usernamePassword(credentialsId: 'ecr_docker_creds', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                         // sh "aws ecr get-login-password --region ${AWS_REGION} | sudo docker login --username AWS --password-stdin ${ECR_REPO_URL}"
-                        sh 'docker login ${ECR_REPO_URL} -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}'
+                        sh '''
+                            docker login ${ECR_REPO_URL} -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+                            grep -oP "image: \\K.*" docker-compose.yml | xargs -I {} docker push {}
+                        '''
                     }
                     
                     // sh 'docker tag helloworld-image:latest ${ECR_REPO_URL}/helloworld-image:latest'
-                    sh 'grep -oP "image: \\K.*" docker-compose.yml | xargs -I {} docker push {}'
+                  
                 }
             }
         }
