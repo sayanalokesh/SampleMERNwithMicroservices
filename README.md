@@ -12,6 +12,7 @@
 3. [Step 3: Version Control](#step-3-version-control)
    - 3.1 [Use AWS CodeCommit](#31-use-aws-codecommit)
 4. [Step 4: Continuous Integration and Deployment with Jenkins](#step-4-continuous-integration-and-deployment-with-jenkins)
+5. [# Step 4: Kubernetes (EKS) Deployment via HELM](#step-4-kubernetes-(eks)-deployment-via-helm)
 
 ## Step 1: Set Up the AWS Environment
 
@@ -97,7 +98,7 @@ sudo docker-compose up -d
 - ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/45f9fbaa-55f0-41a8-9c8a-700dc4c7a248)
 
 
-# EKS Deployment via HELM
+# Step 4: Kubernetes (EKS) Deployment via HELM
 
 Before using Helm we will individually deploy each microservice after that will deploy the whole application using HELM.
 
