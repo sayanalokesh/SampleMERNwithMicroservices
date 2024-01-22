@@ -14,6 +14,16 @@
 4. [Step 4: Continuous Integration and Deployment with Jenkins](#step-4-continuous-integration-and-deployment-with-jenkins)
 5. [Step 5: Kubernetes (EKS) Deployment via HELM](#step-4-kubernetes-eks-deployment-via-helm)
 
+# Prerequisites
+- We need to install the below before starting the project.
+
+1. **aws-cli**
+2. **Boto3**
+3. **Jenkins**
+4. **Docker**
+5. **EKSCTL**
+6. **Kubectl**
+
 ## Step 1: Set Up the AWS Environment
 
 ### 1.1 Set Up AWS CLI and Boto3
