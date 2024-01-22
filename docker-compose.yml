@@ -42,33 +42,36 @@ version: '3'
 
 services:
   helloservice:
+    image: helloworld:1.0.0
     build:
       context: ./backend/helloService
       dockerfile: dockerfile
       args:
-        - TAG=helloservice
+        - TAG=1.0.0
     ports:
       - "3001:3001"
     working_dir: /hello
     command: ["node", "index.js"]
 
   profileservice:
+    image: profileservice:1.0.0
     build:
       context: ./backend/profileService
       dockerfile: dockerfile
       args:
-        - TAG=profileservice
+        - TAG=1.0.0
     ports:
       - "3002:3002"
     working_dir: /profile
     command: ["node", "index.js"]
   
   frontendservice:
+    image: frontend:1.0.0
     build:
       context: ./frontend
       dockerfile: dockerfile
       args:
-        - TAG=frontendservice
+        - TAG=1.0.0
     ports:
       - "3000:3000"
     # depends_on:
