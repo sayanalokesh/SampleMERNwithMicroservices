@@ -1,5 +1,18 @@
 # SampleMERNwithMicroservices
 
+## Table of Contents
+1. [Step 1: Set Up the AWS Environment](#step-1-set-up-the-aws-environment)
+   - 1.1 [Set Up AWS CLI and Boto3](#11-set-up-aws-cli-and-boto3)
+2. [Step 2: Prepare the MERN Application](#step-2-prepare-the-mern-application)
+   - 2.1 [Containerize the MERN Application](#21-containerize-the-mern-application)
+   - 2.2 [Push Docker Images to Amazon ECR](#22-push-docker-images-to-amazon-ecr)
+      - 2.2.1 [Build Docker images for the frontend and backend](#221-build-docker-images-for-the-frontend-and-backend)
+      - 2.2.2 [Create an Amazon ECR repository for each image](#222-create-an-amazon-ecr-repository-for-each-image)
+      - 2.2.3 [Push the Docker images to their respective ECR repositories](#223-push-the-docker-images-to-their-respective-ecr-repositories)
+3. [Step 3: Version Control](#step-3-version-control)
+   - 3.1 [Use AWS CodeCommit](#31-use-aws-codecommit)
+4. [Step 4: Continuous Integration with Jenkins](#step-4-continuous-integration-with-jenkins)
+
 ## Step 1: Set Up the AWS Environment
 
 ### 1.1 Set Up AWS CLI and Boto3
