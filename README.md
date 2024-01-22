@@ -6,6 +6,18 @@
 - Install AWS CLI and configure it with AWS credentials.
   - To log in to the AWS CLI, create an access key from IAM, download it, and save it securely.
   - Configure AWS CLI by entering the access key, secret access key, region, and format as JSON using the `aws configure` command.
+  - ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/19ab7c3a-cd7f-4a13-9692-3316b2bcd3f2)
+  - ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/04e0bcb3-269a-4dbf-b6dc-285a692cb2c0)
+  - ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/d760b6e6-d9b9-4c54-8430-ccfa31892ef3)
+  - ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/8d48858a-0b15-4ccd-85ac-e6968fea14aa)
+  - ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/04f8bbd5-d85b-4b7d-9464-ac808a7e78f6)
+  - ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/08db6623-20ff-4573-986b-2ffc85baa85c)
+- Type AWS configure in the EC2 instance and provide the Access key, Secret Access Key, the region, and the format as JSON. Once you have added the access key successfully, you can confirm by typing again using AWS configure and you will be able to see the same as shown in the below screenshot.
+  -	Aws configure
+  -	![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/f99f3833-bb04-45dd-a74a-4824c2d476f5)
+  -	- Install Boto3 for Python and configure it.
+  ```bash
+  pip install boto3
 
 # EKS Deployment via HELM
 
