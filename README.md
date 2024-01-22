@@ -1,5 +1,11 @@
 # SampleMERNwithMicroservices
 
+## Step 1: Set Up the AWS Environment
+
+### 1.1 Set Up AWS CLI and Boto3
+- Install AWS CLI and configure it with AWS credentials.
+  - To log in to the AWS CLI, create an access key from IAM, download it, and save it securely.
+  - Configure AWS CLI by entering the access key, secret access key, region, and format as JSON using the `aws configure` command.
 
 # EKS Deployment via HELM
 
