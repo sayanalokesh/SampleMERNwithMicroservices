@@ -1,43 +1,3 @@
-# version: '3'
-
-# services:
-#   helloservice:
-#     build:
-#       context: ./backend/helloService
-#       dockerfile: dockerfile
-#       args:
-#         - TAG=helloservice
-#     ports:
-#       - "3001:3001"
-#     working_dir: /hello
-#     command: ["node", "index.js"]
-
-#   profileservice:
-#     build:
-#       context: ./backend/profileService
-#       dockerfile: dockerfile
-#       args:
-#         - TAG=profileservice
-#     ports:
-#       - "3002:3002"
-#     working_dir: /profile
-#     command: ["node", "index.js"]
-
-#   frontendservice:
-#     build:
-#       context: ./frontend
-#       dockerfile: dockerfile
-#       args:
-#         - TAG=frontendservice
-#     ports:
-#       - "3000:3000"
-#     depends_on:
-#       - helloservice
-#       - profileservice
-#     working_dir: /app
-#     command: ["npm", "run", "start"]
-
-
 version: '3'
 
 services:
@@ -46,8 +6,8 @@ services:
     build:
       context: ./backend/helloService
       dockerfile: dockerfile
-      args:
-        - TAG=1.0.0
+      # args:
+      #   - TAG=1.0.0
     ports:
       - "3001:3001"
     working_dir: /hello
@@ -58,8 +18,8 @@ services:
     build:
       context: ./backend/profileService
       dockerfile: dockerfile
-      args:
-        - TAG=1.0.0
+      # args:
+      #   - TAG=1.0.0
     ports:
       - "3002:3002"
     working_dir: /profile
@@ -70,8 +30,8 @@ services:
     build:
       context: ./frontend
       dockerfile: dockerfile
-      args:
-        - TAG=1.0.0
+      # args:
+      #   - TAG=1.0.0
     ports:
       - "3000:3000"
     # depends_on:

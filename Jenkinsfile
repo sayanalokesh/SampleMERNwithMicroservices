@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_REGION = 'ap-south-1'
-        ECR_REPO_URL = 'https://gallery.ecr.aws/c3w1m1q2/lokesh_mern_hellobe'
+        ECR_REPO_URL = 'https://gallery.ecr.aws/c3w1m1q2'
         ECR_REGISTRY = 'public.ecr.aws/c3w1m1q2/'
     }
 
@@ -19,8 +19,8 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'ecr_docker_creds', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
                         // sh "aws ecr get-login-password --region ${AWS_REGION} | sudo docker login --username AWS --password-stdin ${ECR_REPO_URL}"
                         sh '''
-                            docker login ${ECR_REPO_URL} -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
-                            grep -oP "image: \\K.*" docker-compose.yml | xargs -I {} docker push {}
+                            sudo docker login ${ECR_REPO_URL} -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}
+                            grep -oP "image: \\K.*" docker-compose.yml | xargs -I {} sudo docker push {}
                         '''
                     }
                     
