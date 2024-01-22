@@ -57,8 +57,13 @@ sudo docker-compose up -d
 ### 1. Use AWS CodeCommit:
 
 - To use AWS CodeCommit, you need to add the "AWSCodeCommitPowerUser" IAM policy to the user.
+- ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/7f3d8254-39c5-45c8-a2df-f8807111cd01)
 - Once you add the policy, you also need to create “HTTPS Git credentials for AWS CodeCommit” in the user section. You need to scroll down and click on the Generate credentials button. A CSV file will be downloaded and save it securely.
+- ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/43ef6e6d-b442-458d-b4cd-526fed369c77)
 -	Create a CodeCommit repository by clicking on Create repository.
+-	![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/327e4bc9-f377-4afe-89b1-ba2f21347f36)
+-	![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/a2fc5428-875a-42c1-ad14-b579eee413d7)
+-	![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/cf836f34-b377-4e96-80a5-efff34425885)
 - Go to the EC2 instance and execute the following commands in the Git repository:
 
   ```bash
@@ -69,6 +74,8 @@ sudo docker-compose up -d
   git push codecommit main
   ```
 - Once you have executed the above commands, all the files from the GitHub repo will be pushed to the CodeCommit repo. You can verify this by checking the repository, as shown in the screenshot below.
+- ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/dc682219-0a63-41ce-9d0e-a1bf5e9c946a)
+
 
 # Step 4: Continuous Integration and Deployment with Jenkins
 
@@ -83,6 +90,12 @@ sudo docker-compose up -d
 ## 2. Create Jenkins Jobs:
 
 - Create Jenkins jobs for building and pushing Docker images to ECR. Follow the below steps to configure the Jenkins pipeline to push the image to the ECR and deploy the images using a Docker-compose file.
+- ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/475a32aa-2ba8-404a-833a-b94a208ed9b7)
+- ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/cfe3180e-352b-4a19-95fd-06a1e5365279)
+- ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/8928bc58-7ce2-4d21-8e77-1586c4fb4dcd)
+- ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/85ae50df-5c13-4809-b621-bf25a90cfd22)
+- ![image](https://github.com/sayanalokesh/SampleMERNwithMicroservices/assets/105637305/45f9fbaa-55f0-41a8-9c8a-700dc4c7a248)
+
 
 # EKS Deployment via HELM
 
