@@ -11,7 +11,7 @@
       - 2.2.3 [Push the Docker images to their respective ECR repositories](#223-push-the-docker-images-to-their-respective-ecr-repositories)
 3. [Step 3: Version Control](#step-3-version-control)
    - 3.1 [Use AWS CodeCommit](#31-use-aws-codecommit)
-4. [Step 4: Continuous Integration with Jenkins](#step-4-continuous-integration-with-jenkins)
+4. [Step 4: Continuous Integration and Deployment with Jenkins](#step-4-continuous-integration-and-deployment-with-jenkins)
 
 ## Step 1: Set Up the AWS Environment
 
