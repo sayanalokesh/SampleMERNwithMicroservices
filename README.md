@@ -84,7 +84,6 @@ sudo docker-compose up -d
 
 - Create Jenkins jobs for building and pushing Docker images to ECR. Follow the below steps to configure the Jenkins pipeline to push the image to the ECR and deploy the images using a Docker-compose file.
 
-
 # EKS Deployment via HELM
 
 Before using Helm we will individually deploy each microservice after that will deploy the whole application using HELM.
